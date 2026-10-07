@@ -281,8 +281,25 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 /* Hero right: floating stats / orbit */
 .hero-visual {
   position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: 28px;
+}
+.hero-orbits {
+  position: relative;
+  width: 100%; max-width: 440px;
   aspect-ratio: 1 / 1;
   display: grid; place-items: center;
+}
+.hero-portrait {
+  position: relative; z-index: 2;
+  width: 54%; aspect-ratio: 1 / 1;
+  border-radius: 50%; padding: 5px;
+  background: linear-gradient(140deg, rgba(45,212,191,.95), rgba(79,124,255,.75));
+  box-shadow: 0 0 60px rgba(45,212,191,.20);
+}
+.hero-portrait img {
+  width: 100%; height: 100%; display: block;
+  border-radius: 50%; object-fit: cover;
+  background: #0b1430;
 }
 .orbit {
   position: absolute; inset: 0;
@@ -290,8 +307,8 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   border-radius: 50%;
   animation: orbit 18s linear infinite;
 }
-.orbit.o2 { inset: 12%; border-color: rgba(45, 212, 191, 0.16); animation-duration: 12s; animation-direction: reverse; }
-.orbit.o3 { inset: 28%; border-color: rgba(34, 211, 238, 0.20); animation-duration: 7.5s; }
+.orbit.o2 { inset: 10%; border-color: rgba(45, 212, 191, 0.16); animation-duration: 12s; animation-direction: reverse; }
+.orbit.o3 { inset: 20%; border-color: rgba(34, 211, 238, 0.20); animation-duration: 7.5s; }
 .orbit::after {
   content: "";
   position: absolute; width: 9px; height: 9px;
@@ -307,7 +324,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   text-align: center;
 }
 .hero-core .big {
-  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
   font-weight: 800;
 }
 .hero-core .lbl {

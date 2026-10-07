@@ -273,7 +273,9 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   font-size: 0.88rem; color: var(--text-faint);
   font-family: var(--mono);
 }
-.hero-contacts span { display: inline-flex; align-items: center; gap: 7px; }
+.hero-contacts span, .hero-contacts a { display: inline-flex; align-items: center; gap: 7px; }
+.hero-contacts a { color: inherit; text-decoration: none; transition: color .2s; }
+.hero-contacts a:hover { color: var(--teal); }
 .hero-contacts svg { width: 15px; height: 15px; opacity: .75; }
 
 /* Hero right: floating stats / orbit */

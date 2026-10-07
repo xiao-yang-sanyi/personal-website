@@ -17,8 +17,8 @@ A bilingual (中文 / English) single-page academic portfolio covering:
 ## Structure
 
 ```
-index.html          # 中文版 (Chinese)
-index-en.html       # English version
+index.html          # English version (served at the site root)
+index-zh.html       # 中文版 (Chinese)
 css/style.css       # Styles
 js/main.js          # Interactions (lightbox, filter tabs, reveal animations)
 assets/img/         # Figures and diagrams
